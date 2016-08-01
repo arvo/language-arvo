@@ -20,15 +20,27 @@ patterns: [
   }
   {
     match: "\\+"
-    name: "keyword.operator.arithmetic.arvo"
-  }
-  {
-    match: "\\="
-    name: "keyword.operator.assignment.arvo"
+    name: "keyword.operator.arvo"
   }
   {
     match: "\\->"
-    name: "keyword.operator.others.arvo"
+    name: "keyword.operator.arvo"
+  }
+  {
+    comment: "Function declaration"
+    begin: "\\b(fn)\\s+([a-zA-Z_][a-zA-Z0-9_]*)"
+    end: '[\\{]'
+    beginCaptures: {
+      "1": { name: "keyword.other.fn.arvo" }
+      "2": { name: "entity.name.function.arvo" }
+    }
+  }
+  {
+    comment: "Function call"
+    match: '\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\('
+    captures: {
+      "1": { name: "entity.name.function.arvo" }
+    }
   }
 ]
 repository:
@@ -38,12 +50,6 @@ repository:
         begin: "//"
         end: "$\\n?"
         name: "comment.line.double-slash.arvo"
-      }
-    ]
-  identifiers:
-    patterns: [
-      {
-        match: "[_a-zA-Z]([_a-zA-Z]|[0-9])*"
       }
     ]
 scopeName: "source.arvo"
