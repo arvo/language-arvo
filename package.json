@@ -1,0 +1,23 @@
+{
+  "name": "language-arvo",
+  "version": "0.1.0",
+  "description": "A syntax highlighter for the Arvo programming language.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvo/language-arvo.git"
+  },
+  "keywords": [
+    "arvo",
+    "language",
+    "grammar"
+  ],
+  "author": "Benjamin Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arvo/language-arvo/issues"
+  },
+  "homepage": "https://github.com/arvo/language-arvo#readme",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
