@@ -3,4 +3,4 @@
 
 '.source.arvo':
   'editor':
-    'commentStart': '\/\/'
+    'commentStart': '\/\/ '
