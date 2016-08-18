@@ -7,11 +7,14 @@ patterns: [
     include: "#comments"
   }
   {
-    match: "\\b(fn|module|return)\\b"
+    include: "#escape"
+  }
+  {
+    match: "\\b(else|extern|fn|if|import|let|module|mut|sync)\\b"
     name: "keyword.control.arvo"
   }
   {
-    match: "\\b(i64)\\b"
+    match: "\\b(i8|i16|i32|i64|f32|f64|bool|char)\\b"
     name: "storage.type.arvo"
   }
   {
@@ -25,6 +28,15 @@ patterns: [
   {
     match: "\\->"
     name: "keyword.operator.arvo"
+  }
+  {
+    comment: "String literal"
+    name: "string.quoted.double.arvo"
+    begin: "b?\""
+    end: "\""
+    patterns: [{
+        include: "#escape"
+    }]
   }
   {
     comment: "Function declaration"
@@ -50,6 +62,13 @@ repository:
         begin: "//"
         end: "$\\n?"
         name: "comment.line.double-slash.arvo"
+      }
+    ]
+  escape:
+    patterns: [
+      {
+        match: "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)"
+        name: "constant.character.escape.arvo"
       }
     ]
 scopeName: "source.arvo"
