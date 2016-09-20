@@ -10,11 +10,11 @@ patterns: [
     include: "#escape"
   }
   {
-    match: "\\b(else|extern|fn|if|import|let|module|mut|sync)\\b"
+    match: "\\b(else|extern|fn|for|if|import|in|let|module|mut|ref)\\b"
     name: "keyword.control.arvo"
   }
   {
-    match: "\\b(i8|i16|i32|i64|f32|f64|bool|char)\\b"
+    match: "\\b(i8|i16|i32|i64|f32|f64|bool|char|void)\\b"
     name: "storage.type.arvo"
   }
   {
