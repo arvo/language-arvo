@@ -1,6 +1,6 @@
 {
   "name": "language-arvo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A syntax highlighter for the Arvo programming language.",
   "repository": {
     "type": "git",
