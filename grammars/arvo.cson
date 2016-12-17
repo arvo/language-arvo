@@ -14,7 +14,7 @@ patterns: [
     name: "variable.language.arvo"
   }
   {
-    match: "\\b(as|deref|else|extern|for|if|import|in|is|let|match|module|mut|new|ptr|ref|select|sync|then|when)\\b"
+    match: "\\b(as|deref|else|extern|for|if|import|in|is|let|match|module|mut|new|ptr|public|ref|select|sync|then|when)\\b"
     name: "keyword.control.arvo"
   }
   {
