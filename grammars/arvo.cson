@@ -14,7 +14,7 @@ patterns: [
     name: "variable.language.arvo"
   }
   {
-    match: "\\b(as|box|deref|else|extern|for|if|import|in|is|let|match|module|mut|mutex|new|ptr|public|ref|select|sync|then|when)\\b"
+    match: "\\b(as|deref|else|expose|extern|for|if|import|in|let|module|mut|new|public|ref|select|sync|when)\\b"
     name: "keyword.control.arvo"
   }
   {
@@ -44,7 +44,7 @@ patterns: [
   }
   {
     comment: "Function declaration"
-    match: "\\b(fn)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\("
+    match: "\\b(fn)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\("
     captures: {
       "1": { name: "keyword.control.arvo" }
       "2": { name: "entity.name.function.arvo" }
@@ -52,7 +52,7 @@ patterns: [
   }
   {
     comment: "Operator declaration"
-    match: "\\b(fn)\\s+(\\+|\\+=|\\-|\\-=|\\*|\\*=|\\/|\\/=)\\("
+    match: "\\b(fn)\\s+(\\+|\\+=|\\-|\\-=|\\*|\\*=|\\/|\\/=)\\*\\("
     captures: {
       "1": { name: "keyword.control.arvo" }
       "2": { name: "keyword.operator.arvo" }
